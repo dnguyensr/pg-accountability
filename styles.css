@@ -1,0 +1,25 @@
+body {
+  background-image: url("http://i.imgur.com/Maibvzc.jpg");
+  background-size : 100% auto;
+}
+#outer{
+  display:none;
+}
+#inner {
+  color: #b06323;
+  /*margin: auto;*/
+  text-align: center;
+  z-index: 3;
+}
+
+.button {
+    background-color: #b06323; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1em;
+}
