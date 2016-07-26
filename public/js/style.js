@@ -2,10 +2,19 @@ $(document).ready(function() {
   $(window).one('click', function() {
     $('#outer').show();
     });
+  $('body').on('keydown', function(e){
+    if(e.which==53){
+      playSound(trophies);
+    }
+    else if(e.which==101){
+      playSound(trophies);
+    }
+  });
   $('html').on('click', '.yes', function(){
     playSound(trophies);
   });
   $('html').on('click', '.no', function(){
+    // stopAudio();
     var shame = randomShame();
     playSound(shame);
   });
@@ -28,3 +37,14 @@ function randomShame() {
   var shame = arr[Math.floor(Math.random() * 4)];
   return shame
 }
+
+function stopAudio(){
+  $('html').find('audio').each(function(){
+    this.pause(); // Stop playing
+    this.currentTime = 0; // Reset time
+  });
+  // var audio = $('audio');
+  // audio.pause();
+  // var sounds = document.getElementsByTagName('audio');
+  // for(i=0; i<sounds.length; i++) sounds[i].pause();
+};

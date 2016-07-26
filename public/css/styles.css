@@ -2,7 +2,7 @@ body {
   background-image: url("http://i.imgur.com/Maibvzc.jpg");
   background-size : 100% auto;
 }
-#outer{
+#outer, audio{
   display:none;
 }
 #inner {
